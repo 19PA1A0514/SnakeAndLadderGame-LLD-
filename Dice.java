@@ -4,11 +4,11 @@ interface Dice{
 
 class SingleDice implements Dice{
     public int roll(){
-        int score=(int)(Math.random()*6)+1;
+        int score=(int)((Math.random()*6)+1);
         if(score==6){
-            score+=(int)(Math.random()*6)+1;
+            score+=(int)((Math.random()*6)+1);
             if(score==12){
-                score+=(int)(Math.random()*6)+1;
+                score+=(int)((Math.random()*6)+1);
                 if(score==18){
                     return 0;
                 }
@@ -27,11 +27,11 @@ class SingleDice implements Dice{
 }
 class TwoDice implements Dice{
     public int roll(){
-        int score=(int)(Math.random()*6)+1;
+        int score=(int)((Math.random()*(12-1))+1);
         if(score==6){
-            score+=(int)(Math.random()*6)+1;
+            score+=(int)((Math.random()*(12-1))+1);
             if(score==12){
-                score+=(int)(Math.random()*6)+1;
+                score+=(int)((Math.random()*(12-1))+1);
                 if(score==18){
                     return 0;
                 }
