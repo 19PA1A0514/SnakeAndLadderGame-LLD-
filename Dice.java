@@ -6,9 +6,9 @@ class SingleDice implements Dice{
     public int roll(){
         int score=(int)(Math.random()*6)+1;
         if(score==6){
-            score+=roll();
+            score+=(int)(Math.random()*6)+1;
             if(score==12){
-                score+=roll();
+                score+=(int)(Math.random()*6)+1;
                 if(score==18){
                     return 0;
                 }
@@ -29,9 +29,9 @@ class TwoDice implements Dice{
     public int roll(){
         int score=(int)(Math.random()*6)+1;
         if(score==6){
-            score+=roll();
+            score+=(int)(Math.random()*6)+1;
             if(score==12){
-                score+=roll();
+                score+=(int)(Math.random()*6)+1;
                 if(score==18){
                     return 0;
                 }
